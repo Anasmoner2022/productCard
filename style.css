@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+}
+
+p{
+    font-size: 14px;
+}
+
+.container{
+    background-color: hsl(0, 0%, 100%);
+    width: 500px;
+    display: flex;
+    margin: 15vh auto;
+    border-radius: 10px;
+}
+
+.imageProductMobile{
+    display: none;
+}
+
+.productImage{
+    width: 150%;
+}
+
+.imageProductDesktop{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.content{
+    padding: 1rem 1.7rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title,
+.description{
+    color: hsl(228, 12%, 48%);
+    font-family: "Montserrat","serif";
+}
+
+.title{
+    letter-spacing: 5px;
+}
+
+.description{
+    padding-bottom: 1rem;
+    line-height: 20px;
+}
+
+.heading{
+    padding-top: 0.7em;
+    padding-bottom: 0.6em;
+    line-height: 1em;
+    font-family: "Fraunces","sans-serif";
+}
+
+button{
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: "Montserrat","serif";
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+button:hover{
+    background-color: hsl(158, 87%, 9%);
+}
+
+.cartIcon{
+    padding-inline: 10px;
+}
+.priceDetails{
+    display: flex;
+    align-items: center;
+    font-family: "Fraunces","sans-serif";
+    padding-bottom: 25px;
+}
+.price{
+    display: inline-block;
+    color: hsl(158, 36%, 37%);
+}
+.discount{
+    display: inline-block;
+    text-decoration: line-through;
+    padding-inline: 15px ;
+}
+
+
+@media (max-width: 520px) {
+    .container{
+        flex-direction: column;
+        margin: 10vh auto;
+        width: 420px;
+    }
+    .imageProductDesktop{
+        display: none;
+    }
+    .productImage{
+        width: 100%;
+    }
+    .imageProductMobile{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .container{
+        width: 300px;
+    }
+}
